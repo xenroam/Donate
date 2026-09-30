@@ -1,0 +1,314 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const ethImage = `${base}/eth.png`;
+const solImage = `${base}/sol.png`;
+---
+
+<Layout title="Xen Donations">
+  <main class="page theme-forest">
+    <section class="hero">
+      <p class="eyebrow">Cryptocurrency</p>
+      <h1>Donate to the Xen Project. Have a nice day :)</h1>
+      <a class="github" href="https://github.com/xenroam" target="_blank" rel="noreferrer">github.com/xenroam</a>
+    </section>
+
+    <section class="wallet-grid">
+      <article class="wallet-card">
+        <h2>Ethereum L1 / L2</h2>
+        <p class="address">0x4dfe59adc0d96ca9f4138b1b2627c87b0328872e</p>
+        <img src={ethImage} alt="Ethereum wallet QR" loading="lazy" />
+        <p class="network">Ethereum, BNB Chain, Base, Robinhood Chain, Arbitrum, Avalanche, Monad</p>
+      </article>
+
+      <p class="or-divider" aria-label="or">OR</p>
+
+      <article class="wallet-card">
+        <h2>Solana</h2>
+        <p class="address">4t1wd9PMhmNzGNKyZeNhrCTDoUP7TsoayqM1wXHSCN4z</p>
+        <img src={solImage} alt="Solana wallet QR" loading="lazy" />
+      </article>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  .page {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 3rem 1.25rem 2.5rem;
+    font-family: 'Avenir Next', Avenir, 'Segoe UI', sans-serif;
+  }
+
+  .page.theme-ocean {
+    --hero-spot-1: rgba(23, 106, 255, 0.2);
+    --hero-spot-2: rgba(14, 159, 110, 0.18);
+    --hero-base-a: #ffffff;
+    --hero-base-b: #f4f7fb;
+    --hero-border: rgba(18, 35, 56, 0.08);
+    --hero-shadow: rgba(18, 35, 56, 0.1);
+    --title-color: #0f253f;
+    --eyebrow-color: #3b5b7e;
+    --network-color: #4b6789;
+    --address-color: #243c5a;
+    --github-fg: #0f253f;
+    --github-bg: #e9f0ff;
+    --github-border: #c7d7f6;
+    --github-hover-bg: #dfebff;
+    --github-hover-shadow: rgba(15, 37, 63, 0.14);
+    --card-bg: #ffffff;
+    --card-border: rgba(18, 35, 56, 0.1);
+    --card-shadow: rgba(18, 35, 56, 0.08);
+    --address-bg: #f4f8fd;
+    --address-border: #d5e2f5;
+    --image-border: #deebff;
+    --image-bg: #f8fbff;
+  }
+
+  .page.theme-forest {
+    --hero-spot-1: rgba(31, 112, 66, 0.2);
+    --hero-spot-2: rgba(160, 132, 51, 0.16);
+    --hero-base-a: #fbfef9;
+    --hero-base-b: #f2f8ef;
+    --hero-border: rgba(34, 78, 49, 0.16);
+    --hero-shadow: rgba(34, 78, 49, 0.12);
+    --title-color: #1f3a2a;
+    --eyebrow-color: #48694e;
+    --network-color: #537057;
+    --address-color: #2d4a34;
+    --github-fg: #1f3a2a;
+    --github-bg: #e7f3e5;
+    --github-border: #bfd9bf;
+    --github-hover-bg: #d9ecd8;
+    --github-hover-shadow: rgba(31, 58, 42, 0.16);
+    --card-bg: #ffffff;
+    --card-border: rgba(34, 78, 49, 0.14);
+    --card-shadow: rgba(34, 78, 49, 0.08);
+    --address-bg: #f3f8f1;
+    --address-border: #cfdfce;
+    --image-border: #d9ead8;
+    --image-bg: #f7fbf6;
+  }
+
+  .page.theme-sunset {
+    --hero-spot-1: rgba(255, 124, 62, 0.2);
+    --hero-spot-2: rgba(255, 187, 74, 0.18);
+    --hero-base-a: #fffcf7;
+    --hero-base-b: #fff3e3;
+    --hero-border: rgba(143, 82, 44, 0.16);
+    --hero-shadow: rgba(143, 82, 44, 0.12);
+    --title-color: #5f2d1f;
+    --eyebrow-color: #916147;
+    --network-color: #8d5f48;
+    --address-color: #6f4330;
+    --github-fg: #5f2d1f;
+    --github-bg: #ffe8d2;
+    --github-border: #f4cda8;
+    --github-hover-bg: #ffdec0;
+    --github-hover-shadow: rgba(95, 45, 31, 0.18);
+    --card-bg: #ffffff;
+    --card-border: rgba(143, 82, 44, 0.14);
+    --card-shadow: rgba(143, 82, 44, 0.09);
+    --address-bg: #fff6ec;
+    --address-border: #f2d8bd;
+    --image-border: #f4decb;
+    --image-bg: #fffaf3;
+  }
+
+  .page.theme-slate {
+    --hero-spot-1: rgba(81, 112, 149, 0.2);
+    --hero-spot-2: rgba(93, 124, 118, 0.2);
+    --hero-base-a: #f8fafb;
+    --hero-base-b: #eef2f5;
+    --hero-border: rgba(41, 58, 76, 0.16);
+    --hero-shadow: rgba(41, 58, 76, 0.12);
+    --title-color: #1f2f42;
+    --eyebrow-color: #4b6079;
+    --network-color: #586d85;
+    --address-color: #2c3f57;
+    --github-fg: #1f2f42;
+    --github-bg: #e6edf4;
+    --github-border: #c7d6e6;
+    --github-hover-bg: #dbe5ef;
+    --github-hover-shadow: rgba(31, 47, 66, 0.16);
+    --card-bg: #ffffff;
+    --card-border: rgba(41, 58, 76, 0.14);
+    --card-shadow: rgba(41, 58, 76, 0.09);
+    --address-bg: #f2f6fa;
+    --address-border: #d3dfeb;
+    --image-border: #dbe5ef;
+    --image-bg: #f8fafc;
+  }
+
+  .page.theme-mono {
+    --hero-spot-1: rgba(115, 115, 115, 0.16);
+    --hero-spot-2: rgba(170, 170, 170, 0.14);
+    --hero-base-a: #ffffff;
+    --hero-base-b: #f5f5f5;
+    --hero-border: rgba(50, 50, 50, 0.14);
+    --hero-shadow: rgba(50, 50, 50, 0.1);
+    --title-color: #1f1f1f;
+    --eyebrow-color: #555555;
+    --network-color: #616161;
+    --address-color: #2a2a2a;
+    --github-fg: #1f1f1f;
+    --github-bg: #ececec;
+    --github-border: #d3d3d3;
+    --github-hover-bg: #e2e2e2;
+    --github-hover-shadow: rgba(31, 31, 31, 0.14);
+    --card-bg: #ffffff;
+    --card-border: rgba(50, 50, 50, 0.12);
+    --card-shadow: rgba(50, 50, 50, 0.08);
+    --address-bg: #f7f7f7;
+    --address-border: #dddddd;
+    --image-border: #e4e4e4;
+    --image-bg: #fafafa;
+  }
+
+  .hero {
+    padding: 2rem;
+    border-radius: 24px;
+    background:
+      radial-gradient(circle at 90% 0%, var(--hero-spot-1), transparent 35%),
+      radial-gradient(circle at 0% 100%, var(--hero-spot-2), transparent 40%),
+      linear-gradient(120deg, var(--hero-base-a) 0%, var(--hero-base-b) 100%);
+    border: 1px solid var(--hero-border);
+    box-shadow: 0 16px 36px var(--hero-shadow);
+  }
+
+  .eyebrow {
+    margin: 0;
+    font-size: 0.82rem;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--eyebrow-color);
+    font-weight: 700;
+  }
+
+  h1 {
+    margin: 0.6rem 0 0;
+    font-size: 2rem;
+    line-height: 1.2;
+    color: var(--title-color);
+  }
+
+  .lead {
+    margin: 1rem 0 0;
+    max-width: 62ch;
+    color: #304d70;
+    font-size: 1.05rem;
+  }
+
+  .github {
+    display: inline-flex;
+    margin-top: 0.6rem;
+    padding: 0.62rem 1.05rem;
+    border-radius: 999px;
+    text-decoration: none;
+    color: var(--github-fg);
+    background: var(--github-bg);
+    border: 1px solid var(--github-border);
+    font-weight: 700;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  }
+
+  .github:hover {
+    transform: translateY(-1px);
+    background: var(--github-hover-bg);
+    box-shadow: 0 10px 24px var(--github-hover-shadow);
+  }
+
+  .wallet-grid {
+    margin-top: 1.3rem;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+    align-items: start;
+  }
+
+  .or-divider {
+    margin: 0;
+    padding: 0.45rem 0.8rem;
+    border-radius: 999px;
+    border: none;
+    background: var(--address-bg);
+    color: var(--eyebrow-color);
+    font-size: 0.78rem;
+    letter-spacing: 0.12em;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    justify-self: center;
+    align-self: center;
+    white-space: nowrap;
+  }
+
+  .wallet-card {
+    align-self: start;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 22px;
+    padding: 1.25rem;
+    box-shadow: 0 12px 28px var(--card-shadow);
+  }
+
+  h2 {
+    margin: 0;
+    color: var(--title-color);
+    font-size: 1.26rem;
+    line-height: 1.25;
+  }
+
+  .network {
+    margin-top: 0.65rem;
+    color: var(--network-color);
+    font-size: 0.95rem;
+    text-align: center;
+  }
+
+  .address {
+    margin-top: 0.8rem;
+    padding: 0.62rem 0.8rem;
+    border-radius: 10px;
+    background: var(--address-bg);
+    border: 1px solid var(--address-border);
+    color: var(--address-color);
+    font-size: 0.8rem;
+    line-height: 1.5;
+    word-break: break-all;
+    font-family: ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+  }
+
+  img {
+    margin-top: 0.9rem;
+    width: 100%;
+    border-radius: 14px;
+    border: 1px solid var(--image-border);
+    background: var(--image-bg);
+  }
+
+  @media (max-width: 640px) {
+    .page {
+      padding-top: 1.6rem;
+    }
+
+    .hero {
+      padding: 1.3rem;
+      border-radius: 18px;
+    }
+
+    .wallet-card {
+      border-radius: 18px;
+      padding: 1rem;
+    }
+
+    .wallet-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .or-divider {
+      justify-self: center;
+    }
+  }
+</style>
